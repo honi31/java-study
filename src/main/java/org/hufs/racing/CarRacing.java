@@ -9,9 +9,13 @@ public class CarRacing {
     public CarRacing(int carCount, int tryCount){
         this.carCount = carCount;
         this.tryCount = tryCount;
+        validate(carCount, tryCount);
         carPoint = new int[this.carCount];
     }
-
+    private void validate(int carCount, int tryCount) {
+        if (carCount <= 0 || tryCount <= 0)
+            throw new IllegalArgumentException();
+    }
     public void run(){
         carStartPoint();
 
