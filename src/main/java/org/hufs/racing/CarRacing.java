@@ -12,22 +12,22 @@ public class CarRacing {
         carPoint = new int[this.carCount];
     }
 
-    public void Run(){
-        CarStartPoint();
+    public void run(){
+        carStartPoint();
 
         while (tryCount >= 1){
-            GoStraight();
-            ResultView.ResultCarPoint();
+            goStraight();
+
             tryCount--;
         }
     }
-    public void CarStartPoint(){
+    public void carStartPoint(){
         for (int i=0; i<carCount; i++){
             carPoint[i] = 1; //1,1,1
         }
     }
 
-    public void GoStraight(){
+    public void goStraight(){
         Random random = new Random();
         for(int i=0; i<carCount; i++){
             int randomNum = random.nextInt(10);

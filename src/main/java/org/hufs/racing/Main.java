@@ -5,6 +5,8 @@ public class Main {
         InputView inputview = new InputView();
         inputview.setInput();
         CarRacing carracing = new CarRacing(inputview.carCount, inputview.tryCount);
-        carracing.Run();
+        carracing.run();
+        ResultView resultview = new ResultView();
+        resultview.ResultCarPoint(inputview.carCount, inputview.tryCount, carracing.carPoint);
     }
 }
