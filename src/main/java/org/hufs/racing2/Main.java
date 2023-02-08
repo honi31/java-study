@@ -12,7 +12,6 @@ public class Main {
             carracing.printResult();
             System.out.println();
         }
-       // carracing.printResult();
         resultView.printWinner();
     }
 }

@@ -40,7 +40,6 @@ public class CarRacing {
         String[] carsArray = nameofCar.split(",");
         carManagers = new ArrayList<>();
         for (int i = 0; i < carsArray.length; i++) {
-            System.out.println(carsArray[i]);
             Car car = new Car(position);
             carManagers.add(car);
         }

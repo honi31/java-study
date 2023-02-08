@@ -1,8 +1,8 @@
 package org.hufs.racing2;
 
 public class ResultView {
-    private static String winName;
-    private static int winCarPosition = 0;
+    public String winName;
+    public int winCarPosition = 0;
 
     public void showCurrCarRacing(String name, int position) {
         System.out.print(name+": ");
@@ -11,12 +11,12 @@ public class ResultView {
         }
         System.out.println();
     }
-    public void findWinCarName(String carName, int carPosition) {
-        if (carPosition > winCarPosition) {
-            winName = carName;
-            winCarPosition = carPosition;
-        } else if (carPosition == winCarPosition) {
-            winName += ", "+carName;
+    public void findWinCarName(String name, int position) {
+        if (position > winCarPosition) {
+            winName = name;
+            winCarPosition = position;
+        } else if (position == winCarPosition) {
+            winName += ", "+name;
         }
     }
     public void printWinner() {

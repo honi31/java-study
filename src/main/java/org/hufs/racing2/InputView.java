@@ -2,9 +2,6 @@ package org.hufs.racing2;
 
 import java.util.Scanner;
 public class InputView {
-    public String nameofCar;
-    public int tryCount;
-
     Scanner scanner = new Scanner(System.in);
 
     public int getTryCount() {
