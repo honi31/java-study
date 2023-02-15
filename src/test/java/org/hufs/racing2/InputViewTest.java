@@ -14,6 +14,6 @@ class InputViewTest {
                 .isThrownBy(() -> {
                     InputView inputView = new InputView();
                     inputView.inputCarCheck(0);
-                }).withMessageContaining("자동차의 이름은 5자를 넘지 않아야 합니다.");
+                }).withMessageContaining("시도할 횟수는 1이상이어야 합니다.");
     }
 }
