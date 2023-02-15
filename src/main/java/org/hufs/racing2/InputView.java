@@ -1,16 +1,30 @@
 package org.hufs.racing2;
 
 import java.util.Scanner;
+
 public class InputView {
-    Scanner scanner = new Scanner(System.in);
+    public String nameOfCar;
+    public int tryCount;
 
-    public int getTryCount() {
-        System.out.println("시도할 횟수는 몇회인가요?");
-        return scanner.nextInt();
-    }
-
-    public String getNameofCar() {
+    public void getNameOfCar() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("경주할 자동차 이름을 입력하세요");
-        return scanner.next();
+        nameOfCar = scanner.nextLine();//nameofCar
     }
+
+    public void getTryCount() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("시도할 횟수는 몇회인가요?");
+        tryCount = scanner.nextInt();
+    }
+
+
+    public void inputCarCheck(int tryCount) {
+        System.out.println(tryCount);
+        if (tryCount <= 0) {
+            throw new IllegalArgumentException("시도 횟수는 1이상이어야 합니다.");
+        }
+    }
+
 }
+

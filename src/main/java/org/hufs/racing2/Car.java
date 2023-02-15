@@ -2,18 +2,32 @@ package org.hufs.racing2;
 
 public class Car {
     public int position;
+    public String name;
 
-    public Car(int position) {
+    public Car(String name) {
+        validateName(name);
+        this.name = name;
+        this.position = 0;
+    }
+
+    public Car(String name, int position) {
+        this.name = name;
         this.position = position;
     }
-    
 
-    public int getPosition(){
-    return position;
+    private void validateName(String name) {
+        if(name.length() > 5 ) {
+            throw new IllegalArgumentException("자동차의 이름은 5자를 넘지 않아야 합니다.");
+        }
     }
+    public String getName() {
+        return name;
+    }
+
+    public int getPosition() { return position; }
+
     public void goStraight() {
         this.position++;
     }
-
 }
 
