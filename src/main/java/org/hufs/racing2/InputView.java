@@ -9,7 +9,7 @@ public class InputView {
     public void getNameOfCar() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("경주할 자동차 이름을 입력하세요");
-        nameOfCar = scanner.nextLine();//nameofCar
+        nameOfCar = scanner.nextLine();
     }
 
     public void getTryCount() {
@@ -18,11 +18,10 @@ public class InputView {
         tryCount = scanner.nextInt();
     }
 
-
     public void inputCarCheck(int tryCount) {
         System.out.println(tryCount);
         if (tryCount <= 0) {
-            throw new IllegalArgumentException("시도 횟수는 1이상이어야 합니다.");
+            throw new IllegalArgumentException("시도 횟수는 1이상 이어야 합니다.");
         }
     }
 

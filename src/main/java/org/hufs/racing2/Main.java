@@ -14,7 +14,9 @@ public class Main {
             carracing.goCar();
             resultView.startRacing(carracing.getCarSet());
         }
+
         System.out.println();
+
         resultView.findWinnerCarName(carracing.getCarSet());
         resultView.printWinner();
     }

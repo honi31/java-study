@@ -33,6 +33,6 @@ public class ResultView {
         }
     }
     public void printWinner() {
-        System.out.println(maxCarName+"가 최종 우승했습니다.");
+        System.out.println(maxCarName+"가 최종 우승자 입니다.");
     }
 }

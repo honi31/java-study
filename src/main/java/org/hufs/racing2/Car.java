@@ -10,11 +10,6 @@ public class Car {
         this.position = 0;
     }
 
-    public Car(String name, int position) {
-        this.name = name;
-        this.position = position;
-    }
-
     private void validateName(String name) {
         if(name.length() > 5 ) {
             throw new IllegalArgumentException("자동차의 이름은 5자를 넘지 않아야 합니다.");

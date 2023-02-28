@@ -12,7 +12,7 @@ class CarTest {
     public void carName_Check() {
         assertThatExceptionOfType(IllegalArgumentException.class)
                 .isThrownBy(() -> {
-                    Car car = new Car("SonHoni");
+                    Car car = new Car("Sonhonion");
                 }).withMessageContaining("자동차의 이름은 5자를 넘지 않아야 합니다.");
     }
 
